@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Label="Conan-RootDirs">
+    <Conan-VTK-Root>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606</Conan-VTK-Root>
+    <Conan-ITK-Root>$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606</Conan-ITK-Root>
+    <Conan-log4cplus-Root>$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606</Conan-log4cplus-Root>
+  </PropertyGroup>
+    <PropertyGroup Label="ConanVariables">
+    <ConanBinaryDirectories>;%(ConanBinaryDirectories)</ConanBinaryDirectories>
+    <ConanResourceDirectories>;%(ConanResourceDirectories)$(</ConanResourceDirectories>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LocalDebuggerEnvironment>PATH=%PATH%;</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Label="ConanVariables" Condition="'$(Configuration)' == 'release'">
+    <ConanBinaryDirectories>;%(ConanBinaryDirectories)</ConanBinaryDirectories>
+    <ConanResourceDirectories>;%(ConanResourceDirectories)$(</ConanResourceDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'release'">
+    <LocalDebuggerEnvironment>PATH=%PATH%;</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)' == 'release'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib/Release;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib/Release;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib/Release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vtkChartsCore-8.2.lib;vtkCommonColor-8.2.lib;vtkCommonComputationalGeometry-8.2.lib;vtkCommonCore-8.2.lib;vtkCommonDataModel-8.2.lib;vtkCommonExecutionModel-8.2.lib;vtkCommonMath-8.2.lib;vtkCommonMisc-8.2.lib;vtkCommonSystem-8.2.lib;vtkCommonTransforms-8.2.lib;vtkDICOMParser-8.2.lib;vtkDomainsChemistry-8.2.lib;vtkDomainsChemistryOpenGL2-8.2.lib;vtkdoubleconversion-8.2.lib;vtkexodusII-8.2.lib;vtkexpat-8.2.lib;vtkFiltersAMR-8.2.lib;vtkFiltersCore-8.2.lib;vtkFiltersExtraction-8.2.lib;vtkFiltersFlowPaths-8.2.lib;vtkFiltersGeneral-8.2.lib;vtkFiltersGeneric-8.2.lib;vtkFiltersGeometry-8.2.lib;vtkFiltersHybrid-8.2.lib;vtkFiltersHyperTree-8.2.lib;vtkFiltersImaging-8.2.lib;vtkFiltersModeling-8.2.lib;vtkFiltersParallel-8.2.lib;vtkFiltersParallelImaging-8.2.lib;vtkFiltersPoints-8.2.lib;vtkFiltersProgrammable-8.2.lib;vtkFiltersSelection-8.2.lib;vtkFiltersSMP-8.2.lib;vtkFiltersSources-8.2.lib;vtkFiltersStatistics-8.2.lib;vtkFiltersTexture-8.2.lib;vtkFiltersTopology-8.2.lib;vtkFiltersVerdict-8.2.lib;vtkfreetype-8.2.lib;vtkGeovisCore-8.2.lib;vtkgl2ps-8.2.lib;vtkglew-8.2.lib;vtkGUISupportQt-8.2.lib;vtkGUISupportQtSQL-8.2.lib;vtkhdf5-8.2.lib;vtkhdf5_hl-8.2.lib;vtkImagingColor-8.2.lib;vtkImagingCore-8.2.lib;vtkImagingFourier-8.2.lib;vtkImagingGeneral-8.2.lib;vtkImagingHybrid-8.2.lib;vtkImagingMath-8.2.lib;vtkImagingMorphological-8.2.lib;vtkImagingSources-8.2.lib;vtkImagingStatistics-8.2.lib;vtkImagingStencil-8.2.lib;vtkInfovisCore-8.2.lib;vtkInfovisLayout-8.2.lib;vtkInteractionImage-8.2.lib;vtkInteractionStyle-8.2.lib;vtkInteractionWidgets-8.2.lib;vtkIOAMR-8.2.lib;vtkIOAsynchronous-8.2.lib;vtkIOCityGML-8.2.lib;vtkIOCore-8.2.lib;vtkIOEnSight-8.2.lib;vtkIOExodus-8.2.lib;vtkIOExport-8.2.lib;vtkIOExportOpenGL2-8.2.lib;vtkIOExportPDF-8.2.lib;vtkIOGeometry-8.2.lib;vtkIOImage-8.2.lib;vtkIOImport-8.2.lib;vtkIOInfovis-8.2.lib;vtkIOLegacy-8.2.lib;vtkIOLSDyna-8.2.lib;vtkIOMINC-8.2.lib;vtkIOMovie-8.2.lib;vtkIONetCDF-8.2.lib;vtkIOParallel-8.2.lib;vtkIOParallelXML-8.2.lib;vtkIOPLY-8.2.lib;vtkIOSegY-8.2.lib;vtkIOSQL-8.2.lib;vtkIOTecplotTable-8.2.lib;vtkIOVeraOut-8.2.lib;vtkIOVideo-8.2.lib;vtkIOXML-8.2.lib;vtkIOXMLParser-8.2.lib;vtkjpeg-8.2.lib;vtkjsoncpp-8.2.lib;vtklibharu-8.2.lib;vtklibxml2-8.2.lib;vtklz4-8.2.lib;vtklzma-8.2.lib;vtkmetaio-8.2.lib;vtkNetCDF-8.2.lib;vtkogg-8.2.lib;vtkParallelCore-8.2.lib;vtkpng-8.2.lib;vtkproj-8.2.lib;vtkpugixml-8.2.lib;vtkRenderingAnnotation-8.2.lib;vtkRenderingContext2D-8.2.lib;vtkRenderingContextOpenGL2-8.2.lib;vtkRenderingCore-8.2.lib;vtkRenderingFreeType-8.2.lib;vtkRenderingGL2PSOpenGL2-8.2.lib;vtkRenderingImage-8.2.lib;vtkRenderingLabel-8.2.lib;vtkRenderingLOD-8.2.lib;vtkRenderingOpenGL2-8.2.lib;vtkRenderingQt-8.2.lib;vtkRenderingVolume-8.2.lib;vtkRenderingVolumeOpenGL2-8.2.lib;vtksqlite-8.2.lib;vtksys-8.2.lib;vtktheora-8.2.lib;vtktiff-8.2.lib;vtkverdict-8.2.lib;vtkViewsContext2D-8.2.lib;vtkViewsCore-8.2.lib;vtkViewsGeovis-8.2.lib;vtkViewsInfovis-8.2.lib;vtkViewsQt-8.2.lib;vtkzlib-8.2.lib;ITKBiasCorrection-4.13.lib;ITKBioCell-4.13.lib;ITKCommon-4.13.lib;ITKDICOMParser-4.13.lib;itkdouble-conversion-4.13.lib;ITKEXPAT-4.13.lib;ITKFEM-4.13.lib;itkgdcmcharls-4.13.lib;itkgdcmCommon-4.13.lib;itkgdcmDICT-4.13.lib;itkgdcmDSED-4.13.lib;itkgdcmIOD-4.13.lib;itkgdcmjpeg12-4.13.lib;itkgdcmjpeg16-4.13.lib;itkgdcmjpeg8-4.13.lib;itkgdcmMEXD-4.13.lib;itkgdcmMSFF-4.13.lib;itkgdcmopenjp2-4.13.lib;itkgdcmsocketxx-4.13.lib;ITKgiftiio-4.13.lib;ITKIOBioRad-4.13.lib;ITKIOBMP-4.13.lib;ITKIOBruker-4.13.lib;ITKIOCSV-4.13.lib;ITKIOGDCM-4.13.lib;ITKIOGE-4.13.lib;ITKIOGIPL-4.13.lib;ITKIOHDF5-4.13.lib;ITKIOImageBase-4.13.lib;ITKIOIPL-4.13.lib;ITKIOJPEG-4.13.lib;ITKIOLSM-4.13.lib;ITKIOMesh-4.13.lib;ITKIOMeta-4.13.lib;ITKIOMINC-4.13.lib;ITKIOMRC-4.13.lib;ITKIONIFTI-4.13.lib;ITKIONRRD-4.13.lib;ITKIOPNG-4.13.lib;ITKIOSiemens-4.13.lib;ITKIOSpatialObjects-4.13.lib;ITKIOStimulate-4.13.lib;ITKIOTIFF-4.13.lib;ITKIOTransformBase-4.13.lib;ITKIOTransformHDF5-4.13.lib;ITKIOTransformInsightLegacy-4.13.lib;ITKIOTransformMatlab-4.13.lib;ITKIOVTK-4.13.lib;ITKIOXML-4.13.lib;itkjpeg-4.13.lib;ITKKLMRegionGrowing-4.13.lib;ITKLabelMap-4.13.lib;itklbfgs-4.13.lib;ITKMesh-4.13.lib;ITKMetaIO-4.13.lib;itkminc2-4.13.lib;itknetlib-4.13.lib;itkNetlibSlatec-4.13.lib;ITKniftiio-4.13.lib;ITKNrrdIO-4.13.lib;itkopenjpeg-4.13.lib;ITKOptimizers-4.13.lib;ITKOptimizersv4-4.13.lib;ITKPath-4.13.lib;itkpng-4.13.lib;ITKPolynomials-4.13.lib;ITKQuadEdgeMesh-4.13.lib;ITKReview-4.13.lib;ITKSpatialObjects-4.13.lib;ITKStatistics-4.13.lib;itksys-4.13.lib;itktestlib-4.13.lib;itktiff-4.13.lib;ITKTransform-4.13.lib;ITKTransformFactory-4.13.lib;itkv3p_netlib-4.13.lib;itkvcl-4.13.lib;ITKVideoCore-4.13.lib;ITKVideoIO-4.13.lib;itkvnl-4.13.lib;ITKVNLInstantiation-4.13.lib;itkvnl_algo-4.13.lib;ITKVTK-4.13.lib;ITKVtkGlue-4.13.lib;ITKWatersheds-4.13.lib;itkzlib-4.13.lib;ITKznz-4.13.lib;libitkhdf5.lib;libitkhdf5_cpp.lib;log4cplusS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <PropertyGroup Label="ConanVariables" Condition="'$(Configuration)' == 'debug'">
+    <ConanBinaryDirectories>;%(ConanBinaryDirectories)</ConanBinaryDirectories>
+    <ConanResourceDirectories>;%(ConanResourceDirectories)$(</ConanResourceDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'debug'">
+    <LocalDebuggerEnvironment>PATH=%PATH%;</LocalDebuggerEnvironment>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)' == 'debug'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib/Debug;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib/Debug;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\lib/Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>vtkChartsCore-8.2.lib;vtkCommonColor-8.2.lib;vtkCommonComputationalGeometry-8.2.lib;vtkCommonCore-8.2.lib;vtkCommonDataModel-8.2.lib;vtkCommonExecutionModel-8.2.lib;vtkCommonMath-8.2.lib;vtkCommonMisc-8.2.lib;vtkCommonSystem-8.2.lib;vtkCommonTransforms-8.2.lib;vtkDICOMParser-8.2.lib;vtkDomainsChemistry-8.2.lib;vtkDomainsChemistryOpenGL2-8.2.lib;vtkdoubleconversion-8.2.lib;vtkexodusII-8.2.lib;vtkexpat-8.2.lib;vtkFiltersAMR-8.2.lib;vtkFiltersCore-8.2.lib;vtkFiltersExtraction-8.2.lib;vtkFiltersFlowPaths-8.2.lib;vtkFiltersGeneral-8.2.lib;vtkFiltersGeneric-8.2.lib;vtkFiltersGeometry-8.2.lib;vtkFiltersHybrid-8.2.lib;vtkFiltersHyperTree-8.2.lib;vtkFiltersImaging-8.2.lib;vtkFiltersModeling-8.2.lib;vtkFiltersParallel-8.2.lib;vtkFiltersParallelImaging-8.2.lib;vtkFiltersPoints-8.2.lib;vtkFiltersProgrammable-8.2.lib;vtkFiltersSelection-8.2.lib;vtkFiltersSMP-8.2.lib;vtkFiltersSources-8.2.lib;vtkFiltersStatistics-8.2.lib;vtkFiltersTexture-8.2.lib;vtkFiltersTopology-8.2.lib;vtkFiltersVerdict-8.2.lib;vtkfreetype-8.2.lib;vtkGeovisCore-8.2.lib;vtkgl2ps-8.2.lib;vtkglew-8.2.lib;vtkGUISupportQt-8.2.lib;vtkGUISupportQtSQL-8.2.lib;vtkhdf5-8.2.lib;vtkhdf5_hl-8.2.lib;vtkImagingColor-8.2.lib;vtkImagingCore-8.2.lib;vtkImagingFourier-8.2.lib;vtkImagingGeneral-8.2.lib;vtkImagingHybrid-8.2.lib;vtkImagingMath-8.2.lib;vtkImagingMorphological-8.2.lib;vtkImagingSources-8.2.lib;vtkImagingStatistics-8.2.lib;vtkImagingStencil-8.2.lib;vtkInfovisCore-8.2.lib;vtkInfovisLayout-8.2.lib;vtkInteractionImage-8.2.lib;vtkInteractionStyle-8.2.lib;vtkInteractionWidgets-8.2.lib;vtkIOAMR-8.2.lib;vtkIOAsynchronous-8.2.lib;vtkIOCityGML-8.2.lib;vtkIOCore-8.2.lib;vtkIOEnSight-8.2.lib;vtkIOExodus-8.2.lib;vtkIOExport-8.2.lib;vtkIOExportOpenGL2-8.2.lib;vtkIOExportPDF-8.2.lib;vtkIOGeometry-8.2.lib;vtkIOImage-8.2.lib;vtkIOImport-8.2.lib;vtkIOInfovis-8.2.lib;vtkIOLegacy-8.2.lib;vtkIOLSDyna-8.2.lib;vtkIOMINC-8.2.lib;vtkIOMovie-8.2.lib;vtkIONetCDF-8.2.lib;vtkIOParallel-8.2.lib;vtkIOParallelXML-8.2.lib;vtkIOPLY-8.2.lib;vtkIOSegY-8.2.lib;vtkIOSQL-8.2.lib;vtkIOTecplotTable-8.2.lib;vtkIOVeraOut-8.2.lib;vtkIOVideo-8.2.lib;vtkIOXML-8.2.lib;vtkIOXMLParser-8.2.lib;vtkjpeg-8.2.lib;vtkjsoncpp-8.2.lib;vtklibharu-8.2.lib;vtklibxml2-8.2.lib;vtklz4-8.2.lib;vtklzma-8.2.lib;vtkmetaio-8.2.lib;vtkNetCDF-8.2.lib;vtkogg-8.2.lib;vtkParallelCore-8.2.lib;vtkpng-8.2.lib;vtkproj-8.2.lib;vtkpugixml-8.2.lib;vtkRenderingAnnotation-8.2.lib;vtkRenderingContext2D-8.2.lib;vtkRenderingContextOpenGL2-8.2.lib;vtkRenderingCore-8.2.lib;vtkRenderingFreeType-8.2.lib;vtkRenderingGL2PSOpenGL2-8.2.lib;vtkRenderingImage-8.2.lib;vtkRenderingLabel-8.2.lib;vtkRenderingLOD-8.2.lib;vtkRenderingOpenGL2-8.2.lib;vtkRenderingQt-8.2.lib;vtkRenderingVolume-8.2.lib;vtkRenderingVolumeOpenGL2-8.2.lib;vtksqlite-8.2.lib;vtksys-8.2.lib;vtktheora-8.2.lib;vtktiff-8.2.lib;vtkverdict-8.2.lib;vtkViewsContext2D-8.2.lib;vtkViewsCore-8.2.lib;vtkViewsGeovis-8.2.lib;vtkViewsInfovis-8.2.lib;vtkViewsQt-8.2.lib;vtkzlib-8.2.lib;ITKBiasCorrection-4.13.lib;ITKBioCell-4.13.lib;ITKCommon-4.13.lib;ITKDICOMParser-4.13.lib;itkdouble-conversion-4.13.lib;ITKEXPAT-4.13.lib;ITKFEM-4.13.lib;itkgdcmcharls-4.13.lib;itkgdcmCommon-4.13.lib;itkgdcmDICT-4.13.lib;itkgdcmDSED-4.13.lib;itkgdcmIOD-4.13.lib;itkgdcmjpeg12-4.13.lib;itkgdcmjpeg16-4.13.lib;itkgdcmjpeg8-4.13.lib;itkgdcmMEXD-4.13.lib;itkgdcmMSFF-4.13.lib;itkgdcmopenjp2-4.13.lib;itkgdcmsocketxx-4.13.lib;ITKgiftiio-4.13.lib;ITKIOBioRad-4.13.lib;ITKIOBMP-4.13.lib;ITKIOBruker-4.13.lib;ITKIOCSV-4.13.lib;ITKIOGDCM-4.13.lib;ITKIOGE-4.13.lib;ITKIOGIPL-4.13.lib;ITKIOHDF5-4.13.lib;ITKIOImageBase-4.13.lib;ITKIOIPL-4.13.lib;ITKIOJPEG-4.13.lib;ITKIOLSM-4.13.lib;ITKIOMesh-4.13.lib;ITKIOMeta-4.13.lib;ITKIOMINC-4.13.lib;ITKIOMRC-4.13.lib;ITKIONIFTI-4.13.lib;ITKIONRRD-4.13.lib;ITKIOPNG-4.13.lib;ITKIOSiemens-4.13.lib;ITKIOSpatialObjects-4.13.lib;ITKIOStimulate-4.13.lib;ITKIOTIFF-4.13.lib;ITKIOTransformBase-4.13.lib;ITKIOTransformHDF5-4.13.lib;ITKIOTransformInsightLegacy-4.13.lib;ITKIOTransformMatlab-4.13.lib;ITKIOVTK-4.13.lib;ITKIOXML-4.13.lib;itkjpeg-4.13.lib;ITKKLMRegionGrowing-4.13.lib;ITKLabelMap-4.13.lib;itklbfgs-4.13.lib;ITKMesh-4.13.lib;ITKMetaIO-4.13.lib;itkminc2-4.13.lib;itknetlib-4.13.lib;itkNetlibSlatec-4.13.lib;ITKniftiio-4.13.lib;ITKNrrdIO-4.13.lib;itkopenjpeg-4.13.lib;ITKOptimizers-4.13.lib;ITKOptimizersv4-4.13.lib;ITKPath-4.13.lib;itkpng-4.13.lib;ITKPolynomials-4.13.lib;ITKQuadEdgeMesh-4.13.lib;ITKReview-4.13.lib;ITKSpatialObjects-4.13.lib;ITKStatistics-4.13.lib;itksys-4.13.lib;itktestlib-4.13.lib;itktiff-4.13.lib;ITKTransform-4.13.lib;ITKTransformFactory-4.13.lib;itkv3p_netlib-4.13.lib;itkvcl-4.13.lib;ITKVideoCore-4.13.lib;ITKVideoIO-4.13.lib;itkvnl-4.13.lib;ITKVNLInstantiation-4.13.lib;itkvnl_algo-4.13.lib;ITKVTK-4.13.lib;ITKVtkGlue-4.13.lib;ITKWatersheds-4.13.lib;itkzlib-4.13.lib;ITKznz-4.13.lib;libitkhdf5_cpp_D.lib;libitkhdf5_D.lib;log4cplusSD.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <Midl>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </Midl>
+    <ResourceCompile>
+      <AdditionalIncludeDirectories>$(USERPROFILE)\.conan\data\VTK\8.2.0\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\ITK\4.13.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;$(USERPROFILE)\.conan\data\log4cplus\1.2.2\imaging\stable\package\2bb76c9adac7b8cd7c5e3b377ac9f06934aba606\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalOptions> %(AdditionalOptions)</AdditionalOptions>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>

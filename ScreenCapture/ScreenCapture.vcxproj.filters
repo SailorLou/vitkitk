@@ -33,32 +33,82 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ImageGraphicsWindow.cpp">
+    <ClCompile Include="ScreenCapture.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DerivedClass.cpp">
+    <ClCompile Include="GrabManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RegionGrabber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppSettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FreehandGrabber.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PostEffect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WindowGrabber_win.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MiscFunctions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qxtglobal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qxtwindowsystem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qxtwindowsystem_win.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="ImageGraphicsWindow.h">
+    <QtMoc Include="ScreenCapture.h">
       <Filter>Header Files</Filter>
     </QtMoc>
-    <QtMoc Include="DerivedClass.h">
+    <QtMoc Include="GrabManager.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="RegionGrabber.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="AppSettings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="FreehandGrabber.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
-    <QtUic Include="ImageGraphicsWindow.ui">
-      <Filter>Form Files</Filter>
-    </QtUic>
-    <QtUic Include="Widget.ui">
+    <QtUic Include="ScreenCapture.ui">
       <Filter>Form Files</Filter>
     </QtUic>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="ImageGraphicsWindow.qrc">
+    <QtRcc Include="ScreenCapture.qrc">
       <Filter>Resource Files</Filter>
     </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WindowGrabber.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PostEffect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MiscFunctions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qxtwindowsystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qxtglobal.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

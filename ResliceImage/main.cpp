@@ -28,7 +28,6 @@
 #include "vtkResliceCursorWidget.h"
 #include "vtkResliceCursorLineRepresentation.h"
 #include "vtkBiDimensionalWidget.h"
-#include"vtkAutoInit.h"
 #include"vtkAxesActor.h"
 #include"vtkTransform.h"
 #include"vtkTextActor.h"
@@ -55,6 +54,7 @@
 #include"vtkFollower.h"
 #include"vtkTextProperty.h"
 
+#include"vtkAutoInit.h"
 VTK_MODULE_INIT(vtkInteractionStyle)
 VTK_MODULE_INIT(vtkRenderingFreeType)
 
