@@ -8,6 +8,7 @@
 
 [requires]
     ITK/4.Y.Z
+    OpenCV/4.Y.Z
     VTK/8.Y.Z
     log4cplus/1.Y.Z
 
@@ -26,6 +27,7 @@
 
 [full_requires]
     ITK/4.13.2@imaging/stable:2bb76c9adac7b8cd7c5e3b377ac9f06934aba606
+    OpenCV/4.0.0@imaging/stable:2bb76c9adac7b8cd7c5e3b377ac9f06934aba606
     VTK/8.2.0@imaging/stable:2bb76c9adac7b8cd7c5e3b377ac9f06934aba606
     log4cplus/1.2.2@imaging/stable:2bb76c9adac7b8cd7c5e3b377ac9f06934aba606
 

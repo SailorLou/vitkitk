@@ -2,6 +2,7 @@
 VTK/8.2.0@imaging/stable
 ITK/4.13.2@imaging/stable
 log4cplus/1.2.2@imaging/stable
+OpenCV/4.0.0@imaging/stable
 
 [generators]
 visual_studio

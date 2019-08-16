@@ -15,5 +15,5 @@ protected slots:
 
 private:
 	Ui::ScreenCaptureClass ui;
-	GrabManager *_grabber;
+	GrabManager *_grabber;//todo:smart pointer
 };
