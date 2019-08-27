@@ -36,11 +36,14 @@ ImageGraphicsWindow::ImageGraphicsWindow(QWidget *parent)
 
 	ui.checkBox->setChecked(true);
 	ui.checkBox->setDisabled(true);
+
+	ui.lineEdit->setText("xxxx");
 }
 
 void ImageGraphicsWindow::buildConnect()
 {
 	connect(ui.pushButton_3, &QPushButton::clicked, this, &ImageGraphicsWindow::onButtonClick);
+	connect(ui.pushButton_2, &QPushButton::clicked, this, &ImageGraphicsWindow::onButtonClick);
 
 
 	QString ur("http://bzsite.dev.proxima-ai.com/aaa/v1/anno/series_result/search");
@@ -63,15 +66,18 @@ void ImageGraphicsWindow::buildConnect()
 	request.setRawHeader("accessToken", mima.toLocal8Bit());
 
 	auto pManager = new QNetworkAccessManager();
-	QObject::connect(pManager, &QNetworkAccessManager::finished, this, [=](QNetworkReply *reply) {
+	QObject::connect(pManager, &QNetworkAccessManager::finished, this, [=](QNetworkReply *reply)
+	{
 		bool resFlag = false;
 		QByteArray answer = reply->readAll();
 		QJsonObject responseJson = QJsonDocument::fromJson(answer).object();
 
 		int code = responseJson.value("code").toInt();
-		if(!reply->error()) {
+		if(!reply->error())
+		{
 
-			if(code == 0) {
+			if(code == 0)
+			{
 				QJsonObject dataJson = responseJson.value("data").toObject();
 				QJsonDocument document2 = QJsonDocument(dataJson);
 				QByteArray array = document2.toJson();
@@ -95,4 +101,6 @@ void ImageGraphicsWindow::buildConnect()
 void ImageGraphicsWindow::onButtonClick()
 {
 	ui.pushButton_3->setText("baseclass");
+
+
 }

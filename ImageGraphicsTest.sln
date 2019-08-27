@@ -45,6 +45,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "opencv", "opencv", "{C682D0
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FeatureMatching", "FeatureMatching\FeatureMatching.vcxproj", "{52718379-E976-421F-87C3-E7982C6EB8FE}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "encPassword", "QtConsoleApplication1\QtConsoleApplication1.vcxproj", "{1B580654-9287-4EAC-B4D6-CA5DF1DB5C6B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -171,6 +173,12 @@ Global
 		{52718379-E976-421F-87C3-E7982C6EB8FE}.Release|x64.Build.0 = Release|x64
 		{52718379-E976-421F-87C3-E7982C6EB8FE}.Release|x86.ActiveCfg = Release|Win32
 		{52718379-E976-421F-87C3-E7982C6EB8FE}.Release|x86.Build.0 = Release|Win32
+		{1B580654-9287-4EAC-B4D6-CA5DF1DB5C6B}.Debug|x64.ActiveCfg = Debug|Win32
+		{1B580654-9287-4EAC-B4D6-CA5DF1DB5C6B}.Debug|x86.ActiveCfg = Debug|Win32
+		{1B580654-9287-4EAC-B4D6-CA5DF1DB5C6B}.Debug|x86.Build.0 = Debug|Win32
+		{1B580654-9287-4EAC-B4D6-CA5DF1DB5C6B}.Release|x64.ActiveCfg = Release|Win32
+		{1B580654-9287-4EAC-B4D6-CA5DF1DB5C6B}.Release|x86.ActiveCfg = Release|Win32
+		{1B580654-9287-4EAC-B4D6-CA5DF1DB5C6B}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -191,6 +199,7 @@ Global
 		{C5A7BFF6-5DC8-4AAA-87A9-9B066706405D} = {F63FF939-69A0-4533-98A5-4CD94742314B}
 		{2F3D819C-DC23-49A2-B0ED-C3017CAB3E8E} = {A52D2F3E-CA8A-4D86-A984-D00A64E712B2}
 		{52718379-E976-421F-87C3-E7982C6EB8FE} = {C682D008-BFA3-4DE5-953F-FF0B19FF82FA}
+		{1B580654-9287-4EAC-B4D6-CA5DF1DB5C6B} = {A52D2F3E-CA8A-4D86-A984-D00A64E712B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52AF34E9-56D6-4FB0-891F-F72F03172C0C}

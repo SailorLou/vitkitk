@@ -15,6 +15,7 @@
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QCheckBox>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
@@ -34,6 +35,7 @@ public:
     QWidget *widget;
     QCheckBox *checkBox;
     QCheckBox *checkBox_2;
+    QLineEdit *lineEdit;
     QMenuBar *menuBar;
     QToolBar *mainToolBar;
     QStatusBar *statusBar;
@@ -75,6 +77,9 @@ public:
         checkBox_2 = new QCheckBox(centralWidget);
         checkBox_2->setObjectName(QStringLiteral("checkBox_2"));
         checkBox_2->setGeometry(QRect(410, 50, 91, 19));
+        lineEdit = new QLineEdit(centralWidget);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(510, 150, 113, 21));
         ImageGraphicsWindowClass->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(ImageGraphicsWindowClass);
         menuBar->setObjectName(QStringLiteral("menuBar"));
