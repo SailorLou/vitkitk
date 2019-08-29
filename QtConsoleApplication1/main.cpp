@@ -12,6 +12,16 @@
 #include "Test.h"
 #include "Base64.h"
 #include "Vigenere.h"
+#include <QDataStream>
+
+#include "XOREncryption.h"
+#include "modes.h"
+#include "Hex.h"
+//#include "filters"
+
+#include "aes.h"
+using namespace CryptoPP;
+
 static std::string s_key = "ring";
 static QString s_sperator = "\t\n";
 
@@ -27,14 +37,16 @@ bool IniReadFunc(QIODevice &device, QSettings::SettingsMap &settingsMap)
 	QStringList keyValueList = data.split(s_sperator);
 	for(auto var: keyValueList)
 	{
-		if(!var.contains("="))
+		int pos =var.indexOf("=");
+		if(pos < 0)
 			continue;
 
-		QStringList keyValue = var.split("=",QString::SkipEmptyParts);
-		if(keyValue.size() !=2)
+		QString key = var.mid(0, pos);
+		QString value = var.mid(pos+1, var.size()-pos-1);
+		if(key.isEmpty())
 			continue;
 
-		settingsMap[keyValue[0]] = QVariant(keyValue[1]);
+		settingsMap[key] = QVariant(value);
 	}
 
 	return true;
@@ -76,6 +88,47 @@ string readFileIntoString(char * filename)
 	return buf.str();
 }
 
+std::string ECB_AESEncryptStr(std::string sKey, const char *plainText)
+{
+	std::string outstr;
+
+	//Ìîkey
+	SecByteBlock key(AES::MAX_KEYLENGTH);
+	memset(key, 0x30, key.size());
+	sKey.size() <= AES::MAX_KEYLENGTH ? memcpy(key, sKey.c_str(), sKey.size()) : memcpy(key, sKey.c_str(), AES::MAX_KEYLENGTH);
+
+
+	AES::Encryption aesEncryption((byte *)key, AES::MAX_KEYLENGTH);
+
+	ECB_Mode_ExternalCipher::Encryption ecbEncryption(aesEncryption);
+	StreamTransformationFilter ecbEncryptor(ecbEncryption, new HexEncoder(new StringSink(outstr)));
+	ecbEncryptor.Put((byte *)plainText, strlen(plainText));
+	ecbEncryptor.MessageEnd();
+
+	return outstr;
+}
+
+
+
+std::string ECB_AESDecryptStr(std::string sKey, const char *cipherText)
+{
+	std::string outstr;
+
+	//Ìîkey
+	SecByteBlock key(AES::MAX_KEYLENGTH);
+	memset(key, 0x30, key.size());
+	sKey.size() <= AES::MAX_KEYLENGTH ? memcpy(key, sKey.c_str(), sKey.size()) : memcpy(key, sKey.c_str(), AES::MAX_KEYLENGTH);
+
+	ECB_Mode<AES >::Decryption ecbDecryption((byte *)key, AES::MAX_KEYLENGTH);
+
+	HexDecoder decryptor(new StreamTransformationFilter(ecbDecryption, new StringSink(outstr)));
+	decryptor.Put((byte *)cipherText, strlen(cipherText));
+	decryptor.MessageEnd();
+
+	return outstr;
+}
+
+
 int main(int argc, char *argv[])
 {
 	QCoreApplication a(argc, argv);
@@ -85,11 +138,19 @@ int main(int argc, char *argv[])
 	std::string setings = readSettings(settingName);
 	std::cout << setings << endl;
 
-	std::cout << "======================================encrypt=============================================" << endl;
+	//XOREncryption::write(setings, "xor.ini");
+	//std::string xor = XOREncryption::read("xor.ini");
+	//std::cout << "===================================xor===============================================" << endl;
+	//std::cout << xor << endl;
 
-	std::string encr = encrypt(setings, s_key);
-	std::cout << encr << endl;
-	writeSettings(encr, "encr.ini");
+	std::cout << "======================================AES encrypt=============================================" << endl;
+
+	std::string aes= ECB_AESEncryptStr(s_key, setings.c_str());
+	std::cout << aes << std::endl;
+
+	std::cout << "======================================AES decrypt=============================================" << endl;
+	std::string aesDeC = ECB_AESDecryptStr(s_key, aes.c_str());
+	std::cout << aesDeC << std::endl;
 
 	std::cout << "======================================read encrypt =============================================" << endl;
 	QSettings::Format format = QSettings::registerFormat("ini", IniReadFunc, initWriteFunc);
@@ -97,7 +158,7 @@ int main(int argc, char *argv[])
 	QStringList keys = settings.allKeys();
 	for(auto var : keys)
 	{
-		qDebug() << var << "=" << settings.value(var) << endl;
+		qDebug() << var << "=" << settings.value(var).toString() << endl;
 	}
 
 	std::cout << "======================================decrypt =============================================" << endl;
